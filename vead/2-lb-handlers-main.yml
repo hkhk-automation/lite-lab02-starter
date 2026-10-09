@@ -1,0 +1,7 @@
+# Kolleegi lb-rolli handlerid. Proovimiseks: cp vead/2-lb-handlers-main.yml roles/lb/handlers/main.yml
+# Siis muuda mallis midagi väikest (nt fail_timeout=10s -> 12s), et handlerit teavitataks.
+# Taasta: git checkout -- roles/lb/handlers/main.yml roles/lb/templates/nginx.conf.j2
+- name: Nginx laeb seaded uuesti
+  ansible.builtin.service:
+    name: nginx
+    state: reloaded

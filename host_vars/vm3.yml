@@ -1,0 +1,2 @@
+# vm3-s on port 8080 kolleegi testteenuse all, seepärast kuulab rakendus siin 8081-l.
+app_port: 8081

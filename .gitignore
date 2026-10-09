@@ -1,0 +1,12 @@
+# Ansible prahifailid
+*.retry
+__pycache__/
+*.pyc
+
+# Redaktori/OS prahifailid
+.DS_Store
+Thumbs.db
+*.swp
+
+# Vaulti parool ei lähe reposse
+.vault_pass

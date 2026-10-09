@@ -1,0 +1,4 @@
+# Kolleeg tahtis, et port oleks "kindlalt õige". Proovimiseks:
+#   mkdir -p roles/app/vars && cp vead/4-app-vars-main.yml roles/app/vars/main.yml
+# Taasta: rm roles/app/vars/main.yml
+app_port: 8080

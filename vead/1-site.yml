@@ -1,0 +1,25 @@
+# Kolleegi site.yml. Proovimiseks: cp vead/1-site.yml site.yml
+# Taasta: git checkout -- site.yml
+- name: Ühine baas kõigile masinatele
+  hosts: stack
+  become: true
+  roles:
+    - common
+
+- name: Andmebaas
+  hosts: db
+  become: true
+  roles:
+    - db
+
+- name: Rakendusserverid
+  hosts: apps
+  become: true
+  roles:
+    - app
+
+- name: Koormusjaotur
+  hosts: lb
+  become: true
+  roles:
+    - lb

@@ -1,0 +1,141 @@
+{
+  "juhendaja": "mariahkhk",
+  "pealkiri": "Lab 02 · Kolmekihiline rakendus",
+  "tahtaeg": "23.10 kell 23:59",
+  "sildid": [
+    "K2",
+    "ansible",
+    "rollid",
+    "jinja2",
+    "nginx",
+    "postgresql"
+  ],
+  "ulesanded": [
+    {
+      "pealkiri": "A1 · Kirjelda pinu inventaris",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A1**)\n\nGrupid `lb`, `db`, `app`, `stack:children`; `ansible stack -m ping` → 3 × pong.\n\n→ `inventory.ini`"
+    },
+    {
+      "pealkiri": "A2 · Pane muutujad group_vars-i",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A2**)\n\nEnnustustabel täidetud, `ansible-inventory --host vm3` vaadatud.\n\n→ `group_vars/all.yml`"
+    },
+    {
+      "pealkiri": "A3 · Ehita rollide skelett ja site.yml",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A3**)\n\nNeli rolli kausta, `common` jookseb kõigil.\n\n→ `roles/`, `site.yml`"
+    },
+    {
+      "pealkiri": "A4 · Paigalda andmebaas rolliga",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A4**)\n\n`import_tasks`, `loop`, `pg_hba.conf` mall, handlerid, `register`/`when`. `wait_for port=5432` vastab.\n\n→ `roles/db/`"
+    },
+    {
+      "pealkiri": "A5 · Paigalda rakendus vm2-le ja vm3-le",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A5**)\n\nsystemd teenus, `/health` vastab `ok` mõlemas.\n\n→ `roles/app/`"
+    },
+    {
+      "pealkiri": "A6 · Pane koormusjaotur ette",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A6**)\n\nnginx mall `validate`-iga. `curl` annab 502.\n\n→ `roles/lb/`"
+    },
+    {
+      "pealkiri": "A7 · Leia, miks leht annab 502",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A7**)\n\nSELinux (`seboolean`) ja tulemüür (`firewalld`) parandatud rollides, leht vastab."
+    },
+    {
+      "pealkiri": "A8 · Tõenda, et teine jooks ei muuda midagi",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **A8**)\n\nKolm masinat, `changed=0`, commit tehtud.\n\n→ `logid/site_teine_jooks.txt`"
+    },
+    {
+      "pealkiri": "B1 · Pane koormus vahelduma",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **B1**)\n\nMallis `hostvars`, vastavad vm2 ja vm3.\n\n→ `logid/vaheldumine.txt`"
+    },
+    {
+      "pealkiri": "B2 · Lase vigasel mallil kinni jääda",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **B2**)\n\n`failed to validate` nähtud, leht töötas edasi, mall parandatud."
+    },
+    {
+      "pealkiri": "B3 · Võta üks rakendus maha",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **B3**)\n\nÜkski päring ei andnud 502, `site.yml` tõi rakenduse tagasi.\n\n→ `logid/uks_maas.txt`"
+    },
+    {
+      "pealkiri": "B4 · Lisa site.yml-i lõppu kontroll",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **B4**)\n\n`uri` + `assert`, kontroll kukub, kui rakendus on maas."
+    },
+    {
+      "pealkiri": "Lisaülesanne · Peida parool Vaulti",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **Lisaülesanne**)\n\n`group_vars/all/vault.yml` krüptitud, `site.yml` töötab `--ask-vault-pass`-iga."
+    },
+    {
+      "pealkiri": "README täidetud ja push",
+      "silt": "klassitöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/lab/ (osa **Esitamine**)\n\n`README.md` mall täidetud, push tehtud, Autograde K1–K5 läbitud."
+    },
+    {
+      "pealkiri": "Kodutöö I · Lugemine ja küsimused",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **I**)\n\n→ `markmed.md`, `vastused.md`"
+    },
+    {
+      "pealkiri": "Kodutöö H1 · Lisa kolmas rakendusserver ainult inventariga",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **H1**)\n\nMuutub ainult `inventory.ini`.\n\n→ `logid/kolm_rakendust.txt`"
+    },
+    {
+      "pealkiri": "Kodutöö H2 · Uuenda rakendust masinhaaval",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **H2**)\n\n`serial`, `delegate_to`, `run_once`, ükski päring ei andnud 502.\n\n→ `uuendus.yml`, `logid/uuendus.txt`, `logid/uuendus_curl.txt`"
+    },
+    {
+      "pealkiri": "Kodutöö H3 · Pööra vigane versioon tagasi",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **H3**)\n\n`block`/`rescue`, teist masinat ei puudutatud.\n\n→ `uuendus.yml`, `logid/tagasi.txt`"
+    },
+    {
+      "pealkiri": "Kodutöö H4 · Pane sõltuvused kirja",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **H4**)\n\n→ `requirements.yml`, README jaotis „Käivitamine“"
+    },
+    {
+      "pealkiri": "Kodutöö H5 · Leia kolleegi vead",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **H5**)\n\nNeli viga kaustas `vead/`, iga kohta sümptom, põhjus, käsk.\n\n→ `vead.md`"
+    },
+    {
+      "pealkiri": "Kodutöö III · Eneseanalüüs",
+      "silt": "kodutöö",
+      "nadal": 2,
+      "keha": "📖 Juhend: https://hkhk-automation.github.io/devops-lite/week02/homework/ (osa **III**)\n\n`vastused.md` lõpus."
+    }
+  ]
+}

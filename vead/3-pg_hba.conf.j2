@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+# Kolleegi mall. Proovimiseks: cp vead/3-pg_hba.conf.j2 roles/db/templates/pg_hba.conf.j2
+# Taasta: git checkout -- roles/db/templates/pg_hba.conf.j2
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+local   all             all                                     peer
+host    all             all             127.0.0.1/32            scram-sha-256
+host    all             all             ::1/128                 scram-sha-256
+{% for h in groups['app'] %}
+host    {{ db_nimi }}           {{ db_kasutaja }}           {{ h }}         scram-sha-256
+{% endfor %}
