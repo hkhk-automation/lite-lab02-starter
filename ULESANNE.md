@@ -59,11 +59,12 @@ Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
 ## Kontroll
 
-Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Hinne: K1–K5 (45 p). Kodutöö on vabatahtlik boonus – punane rist Actionsis tähendab ainult, et boonus on tegemata.
+Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Hinne: K1–K5 (45 p). README ja kodutöö on vabatahtlik boonus – punane rist Actionsis tähendab ainult, et boonus on tegemata.
 
 | Kontroll | Punkte |
 |---|---|
-| K1–K5: failid ja README, süntaks, rollid ja inventar, mallid ja turve, tõendid | 45 |
+| K1–K5: failid, süntaks, rollid ja inventar, mallid ja turve, tõendid | 45 |
+| BOONUS README mall täidetud | boonus |
 | BOONUS H1 kolm rakendusserverit, H2 uuendus masinhaaval, H3 tagasipööramine | boonus |
 | BOONUS H4 `requirements.yml`, H5 kolleegi vead | boonus |
 | BOONUS I märkmed ja vastused | boonus |
