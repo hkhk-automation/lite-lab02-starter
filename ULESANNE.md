@@ -36,7 +36,7 @@ Eeldus: K1 osa B on tehtud (`ssh vm1`, `ssh vm2`, `ssh vm3` töötavad vm1-s võ
 | `logid/uks_maas.txt` | B3 |
 | `README.md` täidetud | Esitamine |
 
-**Kodus (kodune õpe ja kodutöö):**
+**Kodus (kodune õpe ja kodutöö, vabatahtlik boonus):**
 
 | Fail | Kust |
 |---|---|
@@ -59,14 +59,14 @@ Kui jääd kinni: **Issues → New issue → Vajan abi**. Juhendaja saab teate.
 
 ## Kontroll
 
-Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Loeb **punktisumma**, mitte värv. Kokku 100 punkti: klassitöö 45, kodutöö 55.
+Igal push'il jookseb automaatne kontroll **Autograde** (vahekaart **Actions**). Hinne: K1–K5 (45 p). Kodutöö on vabatahtlik boonus – punane rist Actionsis tähendab ainult, et boonus on tegemata.
 
 | Kontroll | Punkte |
 |---|---|
 | K1–K5: failid ja README, süntaks, rollid ja inventar, mallid ja turve, tõendid | 45 |
-| H1 kolm rakendusserverit, H2 uuendus masinhaaval, H3 tagasipööramine | 30 |
-| H4 `requirements.yml`, H5 kolleegi vead | 11 |
-| Märkmed ja vastused | 14 |
+| BOONUS H1 kolm rakendusserverit, H2 uuendus masinhaaval, H3 tagasipööramine | boonus |
+| BOONUS H4 `requirements.yml`, H5 kolleegi vead | boonus |
+| BOONUS I märkmed ja vastused | boonus |
 
 Tõendi salvestad nii (failinimed on tabelis ülal):
 
